@@ -1,0 +1,38 @@
+[
+  {
+    "test": "Vulnerable: anonymous reads Alice",
+    "expected_status": 200,
+    "actual_status": 200,
+    "passed": true
+  },
+  {
+    "test": "Vulnerable: anonymous reads Bob",
+    "expected_status": 200,
+    "actual_status": 200,
+    "passed": true
+  },
+  {
+    "test": "Protected: anonymous blocked",
+    "expected_status": 401,
+    "actual_status": 401,
+    "passed": true
+  },
+  {
+    "test": "Protected: Alice reads Alice",
+    "expected_status": 200,
+    "actual_status": 200,
+    "passed": true
+  },
+  {
+    "test": "Protected: Alice denied Bob",
+    "expected_status": 403,
+    "actual_status": 403,
+    "passed": true
+  },
+  {
+    "test": "Protected: Bob reads Bob",
+    "expected_status": 200,
+    "actual_status": 200,
+    "passed": true
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "scenario": "SEC-001",
+    "prediction": "broken_access_control",
+    "correct": true
+  },
+  {
+    "scenario": "SEC-002",
+    "prediction": "sql_injection",
+    "correct": true
+  },
+  {
+    "scenario": "SEC-003",
+    "prediction": "insecure_configuration",
+    "correct": true
+  }
+]

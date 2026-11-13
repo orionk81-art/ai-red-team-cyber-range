@@ -1,0 +1,6 @@
+{
+  "test": "unauthenticated_private_record_exposure",
+  "vulnerability_detected": true,
+  "alice_http_status": 200,
+  "bob_http_status": 200
+}

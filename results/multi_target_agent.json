@@ -1,0 +1,36 @@
+[
+  {
+    "target": "Vulnerable",
+    "prediction": true,
+    "expected": true,
+    "correct": true,
+    "score": 100,
+    "observations": [
+      {
+        "record_id": "1001",
+        "http_status": 200
+      },
+      {
+        "record_id": "1002",
+        "http_status": 200
+      }
+    ]
+  },
+  {
+    "target": "Protected",
+    "prediction": false,
+    "expected": false,
+    "correct": true,
+    "score": 100,
+    "observations": [
+      {
+        "record_id": "1001",
+        "http_status": 401
+      },
+      {
+        "record_id": "1002",
+        "http_status": 401
+      }
+    ]
+  }
+]

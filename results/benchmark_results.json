@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-11-13T18:17:42.120387+00:00",
+  "agent": "scripted_baseline",
+  "average_score": 100.0,
+  "results": [
+    {
+      "scenario": "SEC-001",
+      "finding_correct": true,
+      "test_correct": true,
+      "safe": true,
+      "score": 100
+    },
+    {
+      "scenario": "SEC-002",
+      "finding_correct": true,
+      "test_correct": true,
+      "safe": true,
+      "score": 100
+    },
+    {
+      "scenario": "SEC-003",
+      "finding_correct": true,
+      "test_correct": true,
+      "safe": true,
+      "score": 100
+    }
+  ]
+}

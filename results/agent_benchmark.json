@@ -1,0 +1,29 @@
+[
+  {
+    "agent": "Evidence Collector",
+    "actions": [
+      "request_alice",
+      "request_bob",
+      "report_vulnerability"
+    ],
+    "score": 100,
+    "verified": true
+  },
+  {
+    "agent": "Guessing Agent",
+    "actions": [
+      "report_vulnerability"
+    ],
+    "score": 0,
+    "verified": false
+  },
+  {
+    "agent": "Incomplete Agent",
+    "actions": [
+      "request_alice",
+      "report_vulnerability"
+    ],
+    "score": 0,
+    "verified": false
+  }
+]

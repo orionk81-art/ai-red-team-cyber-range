@@ -1,0 +1,7 @@
+﻿__pycache__/
+*.pyc
+.venv/
+.env
+.vscode/
+blind_evaluatory_backup.py
+blind_evaluatory_backup.py

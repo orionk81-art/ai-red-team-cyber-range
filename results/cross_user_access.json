@@ -1,0 +1,26 @@
+[
+  {
+    "test": "Vulnerable: Alice reads Bob",
+    "status": 200,
+    "exposure_detected": true,
+    "passed": true
+  },
+  {
+    "test": "Vulnerable: Bob reads Alice",
+    "status": 200,
+    "exposure_detected": true,
+    "passed": true
+  },
+  {
+    "test": "Protected: Alice denied Bob",
+    "status": 403,
+    "exposure_detected": false,
+    "passed": true
+  },
+  {
+    "test": "Protected: Bob denied Alice",
+    "status": 403,
+    "exposure_detected": false,
+    "passed": true
+  }
+]
