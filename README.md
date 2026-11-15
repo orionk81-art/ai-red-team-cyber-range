@@ -1,148 +1,197 @@
 ﻿
 # AI Red Team Cyber Range
 
-Python Cybersecurity Testing | Vulnerability Detection | Agent Benchmarking
+### Python Cybersecurity Automation | Access-Control Testing | Agent Evaluation
 
-## Project Overview
+A reproducible, localhost-only cybersecurity lab that demonstrates broken access control, compares vulnerable and protected application behavior, evaluates scripted security-testing agents, and explores rule-based vulnerability classification.
 
-A local cybersecurity research prototype demonstrating automated security testing, explainable vulnerability classification, scripted agent evaluation, and reproducible benchmarking.
+Built as a cybersecurity portfolio project using Python and standard-library tools.
 
-The project includes intentionally vulnerable and protected HTTP applications, security testing scripts, and three generations of rule-based vulnerability classifiers.
+## Project Highlights
 
-## Core Capabilities
+- Automated one-command cybersecurity demonstration
+- Intentionally vulnerable and protected HTTP applications
+- Six automated access-control security tests
+- Three scripted agent evaluation strategies
+- Rule-based vulnerability classification experiments
+- JSON benchmark reporting
+- Documented security limitations and validation results
 
-- Automated access-control testing
-- Vulnerable versus protected application comparison
-- Cross-user authorization testing
-- RL-style environment with observations, actions, and rewards
-- Scripted agent benchmarking
-- Explainable vulnerability classification
-- Accuracy, precision, and recall measurement
-- False-positive and false-negative analysis
-- JSON evaluation reports
+## Quick Start
 
-## Vulnerability Categories
+**Requirements:** Python 3.10 or newer.
 
-The classifiers analyze descriptions of three vulnerability types:
+Clone the repository:
 
-1. Broken Access Control
-2. SQL Injection
-3. Insecure Configuration
+```powershell
+git clone https://github.com/orionk81-art/ai-red-team-cyber-range.git
+cd ai-red-team-cyber-range
+```
 
-These classifiers analyze text. They are not live vulnerability scanners or trained AI models.
+Run the demonstration:
 
-## Classifier Benchmark Results
+```powershell
+python run_demo.py
+```
 
-| Evaluation | Accuracy |
-|---|---|
-| Version 1 baseline | 50% (6/12) |
-| Version 2 development | 100% (12/12) |
-| Version 2 fresh evaluation | 25% (3/12) |
-| Version 3 diagnostic | 100% (12/12) |
+The launcher automatically:
 
-Version 3 combines security indicators and provides explanations for its predictions.
+1. Starts the vulnerable application on `127.0.0.1:8000`.
+2. Starts the protected application on `127.0.0.1:8001`.
+3. Runs the security comparison.
+4. Executes the scripted agent benchmark.
+5. Saves JSON results.
+6. Shuts down both applications.
 
-**Important:** Version 3 was developed after examining the fresh evaluation scenarios. Its diagnostic accuracy is not an independent estimate of performance on unseen data.
+Ports 8000 and 8001 must be available before launching.
 
-## Agent Benchmark Results
+## Architecture
 
-| Scripted Agent | Score | Verified |
-|---|---|---|
+```text
+AI Red Team Cyber Range
+|
+|-- run_demo.py
+|     Automated demonstration launcher
+|
+|-- vulnerable_app.py
+|     Intentionally vulnerable HTTP application
+|
+|-- secure_app.py
+|     Simulated access-control protection
+|
+|-- security_comparison.py
+|     Six HTTP security tests
+|
+|-- cyber_range_env.py
+|     Custom agent-testing environment
+|
+|-- agent_benchmark.py
+|     Scripted agent evaluation
+|
+|-- classifier_v3.py ... classifier_v7.py
+|     Experimental rule-based classifiers
+|
+|-- results/
+|     JSON benchmark reports
+|
+|-- README.md
+```
+
+## Security Comparison
+
+The lab compares access-control behavior between two local HTTP applications.
+
+| Test | Expected HTTP Status | Observed Result |
+|---|---:|---|
+| Vulnerable: anonymous reads Alice | 200 | Pass |
+| Vulnerable: anonymous reads Bob | 200 | Pass |
+| Protected: anonymous blocked | 401 | Pass |
+| Protected: Alice reads Alice | 200 | Pass |
+| Protected: Alice denied Bob | 403 | Pass |
+| Protected: Bob reads Bob | 200 | Pass |
+
+**Observed result: 6/6 tests passed.**
+
+The intentionally vulnerable application allows access to fictional records without appropriate authorization.
+
+The protected application demonstrates authentication and authorization decisions using a simulated user identity.
+
+**Important:** The protected application trusts a client-supplied `X-Lab-User` header. This is suitable for illustrating authorization logic but does not provide secure authentication.
+
+Results are written to `results/security_comparison.json`.
+
+## Scripted Agent Benchmark
+
+The project evaluates three scripted strategies in a controlled environment.
+
+| Agent | Observed Score | Verified |
+|---|---:|---|
 | Evidence Collector | 100/100 | Yes |
 | Guessing Agent | 0/100 | No |
 | Incomplete Agent | 0/100 | No |
 
-The agents are scripted strategies, not trained reinforcement-learning agents.
+Results are saved to `results/agent_benchmark.json`.
 
-## Requirements
+These agents are scripted strategies, not trained reinforcement-learning models. Their scores measure performance under this lab's evaluation rules, not general-purpose AI capability.
 
-- Python 3.10 or newer
-- Standard-library Python scripts require no external dependencies
+## Vulnerability Classification Experiments
 
-## Running the Lab
+The project includes experimental Python classifiers that use manually authored detection rules.
 
-Open three PowerShell terminals in the project directory.
+These classifiers are not trained machine-learning models.
 
-Terminal 1:
+### Evaluation History
+
+| Version | Evaluation | Result |
+|---|---|---|
+| V5 | Development scenarios | 24/24 (100%) |
+| V5 | First-run fresh validation | 25/40 (62.5%) |
+| V6 | Development scenarios | 40/40 (100%) |
+| V6 | First-run independent challenge | 12/60 (20%) |
+| V7 | Revised challenge scenarios | 45/60 (75%) |
+
+The V7 evaluation reused previously examined scenarios and therefore is not independent validation.
+
+The differences between development and independent evaluation results demonstrate the limitations of hand-authored rules and the risk of overfitting.
+
+The reported scores should not be interpreted as real-world vulnerability detection accuracy.
+
+## Running Individual Components
+
+Start the vulnerable application:
 
 ```powershell
 python vulnerable_app.py
 ```
 
-Terminal 2:
+Start the protected application in a separate terminal:
 
 ```powershell
 python secure_app.py
 ```
 
-Terminal 3:
+Run the security comparison in another terminal:
 
 ```powershell
 python security_comparison.py
+```
+
+Run the agent benchmark:
+
+```powershell
 python agent_benchmark.py
 ```
 
-The vulnerable application runs on `127.0.0.1:8000`.
+For the complete demonstration, use `python run_demo.py` instead.
 
-The protected application runs on `127.0.0.1:8001`.
+## Security Scope and Limitations
 
-## Running the Classifiers
-
-Version 2:
-
-```powershell
-python improved_classifier.py
-```
-
-Version 3:
-
-```powershell
-python classifier_v3.py
-```
-
-Version 3 diagnostic benchmark:
-
-```powershell
-python benchmark_v3.py
-```
-
-Version 2 development benchmark:
-
-```powershell
-python held_out_benchmark.py
-```
-
-Benchmark reports are saved in the `results/` directory.
-
-## Security Scope
-
-This project is an intentionally vulnerable, localhost-only educational lab.
-
-All records are fictional.
-
-The protected application uses a client-supplied identity header to simulate authorization. It does not provide production-grade authentication.
-
-Testing is restricted to the local lab environment.
-
-## Current Limitations
-
-- Rule-based classifiers, not trained AI models
-- Small, manually authored evaluation datasets
-- Version 3 lacks independent validation
-- Scripted agents rather than learned policies
-- No complete Gymnasium integration
+- Localhost-only educational simulation
+- Fictional records and synthetic test scenarios
 - No production-grade authentication
+- Client-controlled identity header in the protected application
+- Scripted agents rather than learned policies
+- Rule-based classifiers rather than trained AI
+- Small, manually authored evaluation datasets
+- No untouched independent validation for V7
+- No complete Gymnasium integration
+- No claim of production-ready security or real-world detection accuracy
 
-## Planned Improvements
-
-- Independent evaluation on untouched scenarios
-- Randomized security challenges
-- Stronger reward verification
-- Additional vulnerability categories
-- Improved false-positive testing
-- Gymnasium-compatible environment
-- Evaluation of trained or external AI agents
+Only test systems and environments you own or are authorized to assess.
 
 ## Skills Demonstrated
 
-Python automation, cybersecurity testing, access-control analysis, vulnerability classification, benchmark design, evaluation metrics, JSON reporting, and technical documentation.
+Python automation, HTTP security testing, broken access-control analysis, security test design, agent evaluation, vulnerability classification, benchmark methodology, JSON reporting, reproducible demonstrations, and technical documentation.
+
+## Future Improvements
+
+- Real authentication and session management
+- Stronger authorization testing
+- Independent validation using untouched scenarios
+- Improved false-positive and false-negative analysis
+- Gymnasium-compatible environment
+- Evaluation of trained or externally provided AI agents
+
+## License
+
+No license is currently specified. All rights are reserved unless a license is added.
