@@ -1,0 +1,123 @@
+{
+  "benchmark": "version3_diagnostic",
+  "independent_evaluation": false,
+  "total": 12,
+  "correct": 12,
+  "accuracy_percent": 100.0,
+  "precision_percent": 100.0,
+  "recall_percent": 100.0,
+  "confusion_counts": {
+    "true_positive": 9,
+    "false_positive": 0,
+    "false_negative": 0,
+    "true_negative": 3
+  },
+  "per_category": {
+    "broken_access_control": {
+      "total": 3,
+      "correct": 3,
+      "accuracy_percent": 100.0
+    },
+    "sql_injection": {
+      "total": 3,
+      "correct": 3,
+      "accuracy_percent": 100.0
+    },
+    "insecure_configuration": {
+      "total": 3,
+      "correct": 3,
+      "accuracy_percent": 100.0
+    },
+    "unknown": {
+      "total": 3,
+      "correct": 3,
+      "accuracy_percent": 100.0
+    }
+  },
+  "results": [
+    {
+      "id": "EVAL-001",
+      "description": "Changing an invoice number lets a customer read a stranger's billing information.",
+      "expected": "broken_access_control",
+      "predicted": "broken_access_control",
+      "correct": true
+    },
+    {
+      "id": "EVAL-002",
+      "description": "A regular employee can download payroll files reserved for managers.",
+      "expected": "broken_access_control",
+      "predicted": "broken_access_control",
+      "correct": true
+    },
+    {
+      "id": "EVAL-003",
+      "description": "A website exposes private profiles to visitors who have not signed in.",
+      "expected": "broken_access_control",
+      "predicted": "broken_access_control",
+      "correct": true
+    },
+    {
+      "id": "EVAL-004",
+      "description": "A crafted search parameter changes the logic of a database lookup.",
+      "expected": "sql_injection",
+      "predicted": "sql_injection",
+      "correct": true
+    },
+    {
+      "id": "EVAL-005",
+      "description": "An attacker adds malicious syntax to a login field to bypass a database-backed check.",
+      "expected": "sql_injection",
+      "predicted": "sql_injection",
+      "correct": true
+    },
+    {
+      "id": "EVAL-006",
+      "description": "Untrusted form data is concatenated into a query, allowing its intended meaning to change.",
+      "expected": "sql_injection",
+      "predicted": "sql_injection",
+      "correct": true
+    },
+    {
+      "id": "EVAL-007",
+      "description": "A public server still uses factory-default administrator credentials.",
+      "expected": "insecure_configuration",
+      "predicted": "insecure_configuration",
+      "correct": true
+    },
+    {
+      "id": "EVAL-008",
+      "description": "A cloud storage container is mistakenly configured for unrestricted public reading.",
+      "expected": "insecure_configuration",
+      "predicted": "insecure_configuration",
+      "correct": true
+    },
+    {
+      "id": "EVAL-009",
+      "description": "A production website exposes its internal diagnostic console.",
+      "expected": "insecure_configuration",
+      "predicted": "insecure_configuration",
+      "correct": true
+    },
+    {
+      "id": "EVAL-010",
+      "description": "An authorized payroll manager downloads an approved report.",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "id": "EVAL-011",
+      "description": "A database administrator performs a scheduled query optimization.",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "id": "EVAL-012",
+      "description": "A developer disables diagnostic logging before a production release.",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    }
+  ]
+}

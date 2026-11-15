@@ -1,0 +1,91 @@
+{
+  "total": 12,
+  "correct": 6,
+  "accuracy_percent": 50.0,
+  "results": [
+    {
+      "id": "HOLD-001",
+      "description": "An employee retrieves a coworker's confidential records by changing a record ID.",
+      "expected": "broken_access_control",
+      "prediction": "unknown",
+      "correct": false
+    },
+    {
+      "id": "HOLD-002",
+      "description": "A customer accesses another user's private account.",
+      "expected": "broken_access_control",
+      "prediction": "broken_access_control",
+      "correct": true
+    },
+    {
+      "id": "HOLD-003",
+      "description": "A visitor downloads private documents belonging to a different account.",
+      "expected": "broken_access_control",
+      "prediction": "unknown",
+      "correct": false
+    },
+    {
+      "id": "HOLD-004",
+      "description": "An attacker manipulates a database query using crafted input.",
+      "expected": "sql_injection",
+      "prediction": "unknown",
+      "correct": false
+    },
+    {
+      "id": "HOLD-005",
+      "description": "A login form allows SQL injection through unsanitized input.",
+      "expected": "sql_injection",
+      "prediction": "sql_injection",
+      "correct": true
+    },
+    {
+      "id": "HOLD-006",
+      "description": "User-controlled values alter the structure of a database statement.",
+      "expected": "sql_injection",
+      "prediction": "unknown",
+      "correct": false
+    },
+    {
+      "id": "HOLD-007",
+      "description": "A production server reveals detailed error traces and internal settings.",
+      "expected": "insecure_configuration",
+      "prediction": "unknown",
+      "correct": false
+    },
+    {
+      "id": "HOLD-008",
+      "description": "An administrator accidentally enables debug mode on a public website.",
+      "expected": "insecure_configuration",
+      "prediction": "insecure_configuration",
+      "correct": true
+    },
+    {
+      "id": "HOLD-009",
+      "description": "A deployed application exposes sensitive configuration details.",
+      "expected": "insecure_configuration",
+      "prediction": "unknown",
+      "correct": false
+    },
+    {
+      "id": "HOLD-010",
+      "description": "A user successfully resets their own password.",
+      "expected": "unknown",
+      "prediction": "unknown",
+      "correct": true
+    },
+    {
+      "id": "HOLD-011",
+      "description": "A system administrator applies approved security updates.",
+      "expected": "unknown",
+      "prediction": "unknown",
+      "correct": true
+    },
+    {
+      "id": "HOLD-012",
+      "description": "A network monitoring dashboard displays normal traffic.",
+      "expected": "unknown",
+      "prediction": "unknown",
+      "correct": true
+    }
+  ]
+}
