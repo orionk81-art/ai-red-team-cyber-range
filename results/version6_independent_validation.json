@@ -1,0 +1,450 @@
+{
+  "version": "6",
+  "evaluation": "first_run_synthetic_challenge",
+  "total": 60,
+  "correct": 12,
+  "accuracy_percent": 20.0,
+  "false_positives": 7,
+  "false_negatives": 41,
+  "wrong_categories": 0,
+  "per_category": {
+    "broken_access_control": {
+      "total": 15,
+      "correct": 0
+    },
+    "sql_injection": {
+      "total": 15,
+      "correct": 1
+    },
+    "insecure_configuration": {
+      "total": 15,
+      "correct": 3
+    },
+    "unknown": {
+      "total": 15,
+      "correct": 8
+    }
+  },
+  "results": [
+    {
+      "id": 1,
+      "description": "A regular employee opens the finance director's confidential expense records by changing an object reference.",
+      "expected": "broken_access_control",
+      "predicted": "unknown",
+      "correct": false
+    },
+    {
+      "id": 2,
+      "description": "A visitor with no active session retrieves private medical appointment details from a patient portal.",
+      "expected": "broken_access_control",
+      "predicted": "unknown",
+      "correct": false
+    },
+    {
+      "id": 3,
+      "description": "A standard account successfully executes a function reserved for system administrators.",
+      "expected": "broken_access_control",
+      "predicted": "unknown",
+      "correct": false
+    },
+    {
+      "id": 4,
+      "description": "A user replaces the numeric identifier in a download link and receives a stranger's tax document.",
+      "expected": "broken_access_control",
+      "predicted": "unknown",
+      "correct": false
+    },
+    {
+      "id": 5,
+      "description": "An unauthenticated caller obtains a list of internal staff salaries through an API.",
+      "expected": "broken_access_control",
+      "predicted": "unknown",
+      "correct": false
+    },
+    {
+      "id": 6,
+      "description": "A customer modifies an order reference to view another household's purchase history.",
+      "expected": "broken_access_control",
+      "predicted": "unknown",
+      "correct": false
+    },
+    {
+      "id": 7,
+      "description": "A read-only account successfully deletes records that should require elevated privileges.",
+      "expected": "broken_access_control",
+      "predicted": "unknown",
+      "correct": false
+    },
+    {
+      "id": 8,
+      "description": "A member of one project team reads confidential files assigned exclusively to a separate team.",
+      "expected": "broken_access_control",
+      "predicted": "unknown",
+      "correct": false
+    },
+    {
+      "id": 9,
+      "description": "A browser request omits the session cookie but still returns private account information.",
+      "expected": "broken_access_control",
+      "predicted": "unknown",
+      "correct": false
+    },
+    {
+      "id": 10,
+      "description": "A guest user invokes an administrative function despite lacking the required role.",
+      "expected": "broken_access_control",
+      "predicted": "unknown",
+      "correct": false
+    },
+    {
+      "id": 11,
+      "description": "An attacker cycles through sequential document IDs and downloads other people's contracts.",
+      "expected": "broken_access_control",
+      "predicted": "unknown",
+      "correct": false
+    },
+    {
+      "id": 12,
+      "description": "A junior employee changes a role parameter and gains access to executive payroll.",
+      "expected": "broken_access_control",
+      "predicted": "unknown",
+      "correct": false
+    },
+    {
+      "id": 13,
+      "description": "A user alters a workspace identifier and sees messages belonging to a competing company.",
+      "expected": "broken_access_control",
+      "predicted": "unknown",
+      "correct": false
+    },
+    {
+      "id": 14,
+      "description": "An ordinary subscriber can modify another subscriber's saved payment methods.",
+      "expected": "broken_access_control",
+      "predicted": "unknown",
+      "correct": false
+    },
+    {
+      "id": 15,
+      "description": "An external visitor accesses a restricted internal dashboard without being authenticated.",
+      "expected": "broken_access_control",
+      "predicted": "unknown",
+      "correct": false
+    },
+    {
+      "id": 16,
+      "description": "A product search concatenates unchecked text into a database command, changing which rows are returned.",
+      "expected": "sql_injection",
+      "predicted": "unknown",
+      "correct": false
+    },
+    {
+      "id": 17,
+      "description": "A malicious request appends an extra SQL predicate to the application's login lookup.",
+      "expected": "sql_injection",
+      "predicted": "unknown",
+      "correct": false
+    },
+    {
+      "id": 18,
+      "description": "A numeric query-string parameter is interpreted as part of a database expression rather than as data.",
+      "expected": "sql_injection",
+      "predicted": "unknown",
+      "correct": false
+    },
+    {
+      "id": 19,
+      "description": "A search box accepts quote characters that terminate a string literal and alter a backend SELECT.",
+      "expected": "sql_injection",
+      "predicted": "unknown",
+      "correct": false
+    },
+    {
+      "id": 20,
+      "description": "A crafted customer name modifies the database WHERE condition and reveals hidden entries.",
+      "expected": "sql_injection",
+      "predicted": "unknown",
+      "correct": false
+    },
+    {
+      "id": 21,
+      "description": "An attacker manipulates a sorting parameter to inject a database expression.",
+      "expected": "sql_injection",
+      "predicted": "unknown",
+      "correct": false
+    },
+    {
+      "id": 22,
+      "description": "A web form passes unsanitized input into dynamically assembled SQL, allowing unintended record changes.",
+      "expected": "sql_injection",
+      "predicted": "unknown",
+      "correct": false
+    },
+    {
+      "id": 23,
+      "description": "A hostile filter value causes the database to evaluate an attacker-supplied boolean expression.",
+      "expected": "sql_injection",
+      "predicted": "unknown",
+      "correct": false
+    },
+    {
+      "id": 24,
+      "description": "A reporting tool builds SQL by joining raw request values into a query string.",
+      "expected": "sql_injection",
+      "predicted": "unknown",
+      "correct": false
+    },
+    {
+      "id": 25,
+      "description": "A login endpoint accepts a quote-and-comment sequence that bypasses its password comparison.",
+      "expected": "sql_injection",
+      "predicted": "unknown",
+      "correct": false
+    },
+    {
+      "id": 26,
+      "description": "An injected subquery retrieves confidential customer rows through a vulnerable search endpoint.",
+      "expected": "sql_injection",
+      "predicted": "unknown",
+      "correct": false
+    },
+    {
+      "id": 27,
+      "description": "A parameter intended to hold a number instead contains SQL operators and changes the query result.",
+      "expected": "sql_injection",
+      "predicted": "unknown",
+      "correct": false
+    },
+    {
+      "id": 28,
+      "description": "An application interpolates an untrusted username into a SELECT command without using bound parameters.",
+      "expected": "sql_injection",
+      "predicted": "unknown",
+      "correct": false
+    },
+    {
+      "id": 29,
+      "description": "A malicious URL parameter alters the SQL ORDER BY clause used to sort results.",
+      "expected": "sql_injection",
+      "predicted": "unknown",
+      "correct": false
+    },
+    {
+      "id": 30,
+      "description": "An attacker supplies a crafted input that makes a database execute a second unintended statement.",
+      "expected": "sql_injection",
+      "predicted": "sql_injection",
+      "correct": true
+    },
+    {
+      "id": 31,
+      "description": "A production control panel is accessible on the public internet using a vendor-supplied password.",
+      "expected": "insecure_configuration",
+      "predicted": "unknown",
+      "correct": false
+    },
+    {
+      "id": 32,
+      "description": "A cloud object bucket grants read permission to everyone, exposing archived customer files.",
+      "expected": "insecure_configuration",
+      "predicted": "unknown",
+      "correct": false
+    },
+    {
+      "id": 33,
+      "description": "A server publishes its diagnostic status page with sensitive runtime settings visible to visitors.",
+      "expected": "insecure_configuration",
+      "predicted": "unknown",
+      "correct": false
+    },
+    {
+      "id": 34,
+      "description": "An administrative service listens on all interfaces with no authentication requirement.",
+      "expected": "insecure_configuration",
+      "predicted": "unknown",
+      "correct": false
+    },
+    {
+      "id": 35,
+      "description": "A newly deployed appliance retains the manufacturer's initial login combination.",
+      "expected": "insecure_configuration",
+      "predicted": "unknown",
+      "correct": false
+    },
+    {
+      "id": 36,
+      "description": "A web application displays internal exception details and file paths to anonymous users.",
+      "expected": "insecure_configuration",
+      "predicted": "unknown",
+      "correct": false
+    },
+    {
+      "id": 37,
+      "description": "A storage share is configured for worldwide access even though it contains confidential backups.",
+      "expected": "insecure_configuration",
+      "predicted": "insecure_configuration",
+      "correct": true
+    },
+    {
+      "id": 38,
+      "description": "A deployment accidentally leaves a troubleshooting interface available outside the corporate network.",
+      "expected": "insecure_configuration",
+      "predicted": "unknown",
+      "correct": false
+    },
+    {
+      "id": 39,
+      "description": "A production server permits unrestricted browsing of folders containing private documents.",
+      "expected": "insecure_configuration",
+      "predicted": "unknown",
+      "correct": false
+    },
+    {
+      "id": 40,
+      "description": "An operations dashboard can be reached by anyone because network filtering was turned off.",
+      "expected": "insecure_configuration",
+      "predicted": "unknown",
+      "correct": false
+    },
+    {
+      "id": 41,
+      "description": "A public-facing database administration page uses a blank password.",
+      "expected": "insecure_configuration",
+      "predicted": "unknown",
+      "correct": false
+    },
+    {
+      "id": 42,
+      "description": "A development-only diagnostic route remains enabled on the live customer service.",
+      "expected": "insecure_configuration",
+      "predicted": "unknown",
+      "correct": false
+    },
+    {
+      "id": 43,
+      "description": "A cloud firewall rule allows unrestricted inbound connections to a sensitive management port.",
+      "expected": "insecure_configuration",
+      "predicted": "unknown",
+      "correct": false
+    },
+    {
+      "id": 44,
+      "description": "A deployed website exposes configuration secrets through a publicly accessible status endpoint.",
+      "expected": "insecure_configuration",
+      "predicted": "insecure_configuration",
+      "correct": true
+    },
+    {
+      "id": 45,
+      "description": "A server's authentication checks are turned off, leaving its management interface open to outsiders.",
+      "expected": "insecure_configuration",
+      "predicted": "insecure_configuration",
+      "correct": true
+    },
+    {
+      "id": 46,
+      "description": "A security engineer reviews a proposed firewall change without applying it.",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "id": 47,
+      "description": "A developer demonstrates SQL injection concepts using an isolated, nonproduction training database.",
+      "expected": "unknown",
+      "predicted": "sql_injection",
+      "correct": false
+    },
+    {
+      "id": 48,
+      "description": "A customer downloads an invoice assigned to their own authenticated account.",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "id": 49,
+      "description": "An administrator replaces a vendor password with a unique credential before installation.",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "id": 50,
+      "description": "A monitoring system records a failed attempt to access a restricted administrative endpoint.",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "id": 51,
+      "description": "A tester submits a UNION SELECT string to a local practice application during an approved exercise.",
+      "expected": "unknown",
+      "predicted": "sql_injection",
+      "correct": false
+    },
+    {
+      "id": 52,
+      "description": "A production team confirms that a management interface is reachable only through the corporate VPN.",
+      "expected": "unknown",
+      "predicted": "insecure_configuration",
+      "correct": false
+    },
+    {
+      "id": 53,
+      "description": "A database application uses parameterized queries to prevent attacker input from changing SQL logic.",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "id": 54,
+      "description": "An authorized payroll manager views employee salary information as part of normal duties.",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "id": 55,
+      "description": "A web server returns a 403 response when an unauthenticated visitor requests private documents.",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "id": 56,
+      "description": "An engineer disables a publicly reachable debug console before releasing the service.",
+      "expected": "unknown",
+      "predicted": "insecure_configuration",
+      "correct": false
+    },
+    {
+      "id": 57,
+      "description": "A developer writes documentation describing how SQL statements are constructed.",
+      "expected": "unknown",
+      "predicted": "sql_injection",
+      "correct": false
+    },
+    {
+      "id": 58,
+      "description": "A security analyst investigates a reported exposed dashboard but finds no public access.",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "id": 59,
+      "description": "An internal application permits anonymous access to a deliberately public help page.",
+      "expected": "unknown",
+      "predicted": "insecure_configuration",
+      "correct": false
+    },
+    {
+      "id": 60,
+      "description": "A maintenance worker rotates default credentials and verifies that remote administration requires authentication.",
+      "expected": "unknown",
+      "predicted": "insecure_configuration",
+      "correct": false
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "benchmark": "Version 4 initial independent evaluation",
+  "timestamp_utc": "2026-11-15T19:12:17.588163+00:00",
+  "total": 20,
+  "correct": 20,
+  "accuracy": 1.0,
+  "results": [
+    {
+      "id": 1,
+      "description": "A customer modifies the account identifier in a request and downloads another customer's confidential statement.",
+      "expected": "broken_access_control",
+      "predicted": "broken_access_control",
+      "correct": true
+    },
+    {
+      "id": 2,
+      "description": "A guest retrieves private employee records without permission.",
+      "expected": "broken_access_control",
+      "predicted": "broken_access_control",
+      "correct": true
+    },
+    {
+      "id": 3,
+      "description": "An ordinary staff member views restricted payroll files belonging to another department.",
+      "expected": "broken_access_control",
+      "predicted": "broken_access_control",
+      "correct": true
+    },
+    {
+      "id": 4,
+      "description": "A user changes an invoice number and obtains another company's billing records.",
+      "expected": "broken_access_control",
+      "predicted": "broken_access_control",
+      "correct": true
+    },
+    {
+      "id": 5,
+      "description": "A signed-out visitor can read confidential customer profiles.",
+      "expected": "broken_access_control",
+      "predicted": "broken_access_control",
+      "correct": true
+    },
+    {
+      "id": 6,
+      "description": "A crafted search parameter alters the database query and returns unintended rows.",
+      "expected": "sql_injection",
+      "predicted": "sql_injection",
+      "correct": true
+    },
+    {
+      "id": 7,
+      "description": "Untrusted form data is concatenated into a database statement, allowing an attacker to manipulate its logic.",
+      "expected": "sql_injection",
+      "predicted": "sql_injection",
+      "correct": true
+    },
+    {
+      "id": 8,
+      "description": "An attacker injects SQL syntax into a login field to bypass the database authentication check.",
+      "expected": "sql_injection",
+      "predicted": "sql_injection",
+      "correct": true
+    },
+    {
+      "id": 9,
+      "description": "A malicious database query uses injected conditions to retrieve unauthorized information.",
+      "expected": "sql_injection",
+      "predicted": "sql_injection",
+      "correct": true
+    },
+    {
+      "id": 10,
+      "description": "A crafted input changes the logic of a database search operation.",
+      "expected": "sql_injection",
+      "predicted": "sql_injection",
+      "correct": true
+    },
+    {
+      "id": 11,
+      "description": "A production server exposes a diagnostic console with unrestricted public access.",
+      "expected": "insecure_configuration",
+      "predicted": "insecure_configuration",
+      "correct": true
+    },
+    {
+      "id": 12,
+      "description": "A cloud storage service is misconfigured to permit public reading of sensitive files.",
+      "expected": "insecure_configuration",
+      "predicted": "insecure_configuration",
+      "correct": true
+    },
+    {
+      "id": 13,
+      "description": "A website runs with enabled debug settings in production.",
+      "expected": "insecure_configuration",
+      "predicted": "insecure_configuration",
+      "correct": true
+    },
+    {
+      "id": 14,
+      "description": "A server retains factory-default administrator credentials.",
+      "expected": "insecure_configuration",
+      "predicted": "insecure_configuration",
+      "correct": true
+    },
+    {
+      "id": 15,
+      "description": "A production website exposes default credentials through an unsafe configuration.",
+      "expected": "insecure_configuration",
+      "predicted": "insecure_configuration",
+      "correct": true
+    },
+    {
+      "id": 16,
+      "description": "An employee accesses their own approved payroll report.",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "id": 17,
+      "description": "A database administrator reviews query performance using an authorized monitoring dashboard.",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "id": 18,
+      "description": "A customer changes their password using the normal account recovery process.",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "id": 19,
+      "description": "A developer disables debug mode before deploying a website to production.",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "id": 20,
+      "description": "An administrator updates server credentials according to the organization's security policy.",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    }
+  ]
+}

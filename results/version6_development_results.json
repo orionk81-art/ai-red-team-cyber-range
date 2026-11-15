@@ -1,0 +1,248 @@
+{
+  "version": "6",
+  "evaluation": "development",
+  "total": 40,
+  "correct": 40,
+  "results": [
+    {
+      "id": 1,
+      "description": "An ordinary account holder retrieves private invoices belonging to a different organization by guessing invoice numbers.",
+      "expected": "broken_access_control",
+      "predicted": "broken_access_control"
+    },
+    {
+      "id": 2,
+      "description": "A guest can read confidential employee profiles without signing in.",
+      "expected": "broken_access_control",
+      "predicted": "broken_access_control"
+    },
+    {
+      "id": 3,
+      "description": "Changing the owner identifier in an API request reveals another customer's billing history.",
+      "expected": "broken_access_control",
+      "predicted": "broken_access_control"
+    },
+    {
+      "id": 4,
+      "description": "A basic user successfully invokes a supervisor-only approval operation.",
+      "expected": "broken_access_control",
+      "predicted": "broken_access_control"
+    },
+    {
+      "id": 5,
+      "description": "A mobile client displays confidential records from unrelated customers after a resource identifier is modified.",
+      "expected": "broken_access_control",
+      "predicted": "broken_access_control"
+    },
+    {
+      "id": 6,
+      "description": "An anonymous visitor downloads internal payroll documents through a predictable endpoint.",
+      "expected": "broken_access_control",
+      "predicted": "broken_access_control"
+    },
+    {
+      "id": 7,
+      "description": "A student accesses another student's grades by modifying the record number.",
+      "expected": "broken_access_control",
+      "predicted": "broken_access_control"
+    },
+    {
+      "id": 8,
+      "description": "A customer can cancel purchases made by someone else without permission.",
+      "expected": "broken_access_control",
+      "predicted": "broken_access_control"
+    },
+    {
+      "id": 9,
+      "description": "An unprivileged session retrieves administrator audit logs.",
+      "expected": "broken_access_control",
+      "predicted": "broken_access_control"
+    },
+    {
+      "id": 10,
+      "description": "An attacker swaps the account reference and receives another tenant's confidential documents.",
+      "expected": "broken_access_control",
+      "predicted": "broken_access_control"
+    },
+    {
+      "id": 11,
+      "description": "A search field accepts a UNION SELECT payload that exposes database rows.",
+      "expected": "sql_injection",
+      "predicted": "sql_injection"
+    },
+    {
+      "id": 12,
+      "description": "An attacker changes a filter parameter to alter the WHERE clause of a database query.",
+      "expected": "sql_injection",
+      "predicted": "sql_injection"
+    },
+    {
+      "id": 13,
+      "description": "A login form concatenates user-controlled strings directly into an SQL statement.",
+      "expected": "sql_injection",
+      "predicted": "sql_injection"
+    },
+    {
+      "id": 14,
+      "description": "A crafted input changes the application's database query logic.",
+      "expected": "sql_injection",
+      "predicted": "sql_injection"
+    },
+    {
+      "id": 15,
+      "description": "A malicious product ID causes the database to execute unintended commands.",
+      "expected": "sql_injection",
+      "predicted": "sql_injection"
+    },
+    {
+      "id": 16,
+      "description": "An attacker supplies an always-true condition to bypass a database-backed login.",
+      "expected": "sql_injection",
+      "predicted": "sql_injection"
+    },
+    {
+      "id": 17,
+      "description": "An HTTP parameter is inserted into a query without parameter binding, allowing data extraction.",
+      "expected": "sql_injection",
+      "predicted": "sql_injection"
+    },
+    {
+      "id": 18,
+      "description": "A reporting endpoint executes an injected ORDER BY expression.",
+      "expected": "sql_injection",
+      "predicted": "sql_injection"
+    },
+    {
+      "id": 19,
+      "description": "Untrusted form data becomes executable SQL inside a search operation.",
+      "expected": "sql_injection",
+      "predicted": "sql_injection"
+    },
+    {
+      "id": 20,
+      "description": "A manipulated request triggers unauthorized database updates through unsafe query construction.",
+      "expected": "sql_injection",
+      "predicted": "sql_injection"
+    },
+    {
+      "id": 21,
+      "description": "A production management interface is reachable from the internet without authentication.",
+      "expected": "insecure_configuration",
+      "predicted": "insecure_configuration"
+    },
+    {
+      "id": 22,
+      "description": "A deployed appliance still accepts its factory-default administrator password.",
+      "expected": "insecure_configuration",
+      "predicted": "insecure_configuration"
+    },
+    {
+      "id": 23,
+      "description": "A diagnostic endpoint exposes environment variables to unauthenticated visitors.",
+      "expected": "insecure_configuration",
+      "predicted": "insecure_configuration"
+    },
+    {
+      "id": 24,
+      "description": "The web server allows anonymous directory listing of sensitive files.",
+      "expected": "insecure_configuration",
+      "predicted": "insecure_configuration"
+    },
+    {
+      "id": 25,
+      "description": "A production application exposes detailed stack traces and internal paths.",
+      "expected": "insecure_configuration",
+      "predicted": "insecure_configuration"
+    },
+    {
+      "id": 26,
+      "description": "The firewall was disabled, leaving the administrative console accessible from any IP address.",
+      "expected": "insecure_configuration",
+      "predicted": "insecure_configuration"
+    },
+    {
+      "id": 27,
+      "description": "A public cloud storage container permits unrestricted reading of confidential backups.",
+      "expected": "insecure_configuration",
+      "predicted": "insecure_configuration"
+    },
+    {
+      "id": 28,
+      "description": "An administrator accidentally enables debug mode on the public production website.",
+      "expected": "insecure_configuration",
+      "predicted": "insecure_configuration"
+    },
+    {
+      "id": 29,
+      "description": "A database dashboard is exposed to the internet with no network restrictions.",
+      "expected": "insecure_configuration",
+      "predicted": "insecure_configuration"
+    },
+    {
+      "id": 30,
+      "description": "The server's security controls were disabled, exposing a sensitive diagnostic console.",
+      "expected": "insecure_configuration",
+      "predicted": "insecure_configuration"
+    },
+    {
+      "id": 31,
+      "description": "A developer removes default credentials before deploying the application.",
+      "expected": "unknown",
+      "predicted": "unknown"
+    },
+    {
+      "id": 32,
+      "description": "An employee downloads a report explicitly authorized for their account.",
+      "expected": "unknown",
+      "predicted": "unknown"
+    },
+    {
+      "id": 33,
+      "description": "A security engineer disables debug mode on the production server.",
+      "expected": "unknown",
+      "predicted": "unknown"
+    },
+    {
+      "id": 34,
+      "description": "An administrator blocks external access to the management interface.",
+      "expected": "unknown",
+      "predicted": "unknown"
+    },
+    {
+      "id": 35,
+      "description": "A database developer uses prepared statements to safely process search input.",
+      "expected": "unknown",
+      "predicted": "unknown"
+    },
+    {
+      "id": 36,
+      "description": "A tester reviews SQL syntax in an isolated training exercise.",
+      "expected": "unknown",
+      "predicted": "unknown"
+    },
+    {
+      "id": 37,
+      "description": "An approved staging environment runs a diagnostic console for internal testing.",
+      "expected": "unknown",
+      "predicted": "unknown"
+    },
+    {
+      "id": 38,
+      "description": "A security review documents a previously exposed endpoint that has now been fixed.",
+      "expected": "unknown",
+      "predicted": "unknown"
+    },
+    {
+      "id": 39,
+      "description": "An authorized analyst accesses audit logs using an approved administrative account.",
+      "expected": "unknown",
+      "predicted": "unknown"
+    },
+    {
+      "id": 40,
+      "description": "A system administrator patches a misconfigured service and verifies that access restrictions are restored.",
+      "expected": "unknown",
+      "predicted": "unknown"
+    }
+  ]
+}

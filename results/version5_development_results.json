@@ -1,0 +1,152 @@
+{
+  "version": "5",
+  "evaluation": "development",
+  "total": 24,
+  "correct": 24,
+  "results": [
+    {
+      "id": 1,
+      "description": "By altering a URL identifier, a shopper can inspect purchase histories belonging to unrelated customers.",
+      "expected": "broken_access_control",
+      "predicted": "broken_access_control"
+    },
+    {
+      "id": 2,
+      "description": "A low-privilege operator is able to export financial documents intended exclusively for executives.",
+      "expected": "broken_access_control",
+      "predicted": "broken_access_control"
+    },
+    {
+      "id": 3,
+      "description": "The API returns a different tenant's medical documents when the requester substitutes a tenant ID.",
+      "expected": "broken_access_control",
+      "predicted": "broken_access_control"
+    },
+    {
+      "id": 4,
+      "description": "A visitor without an account can inspect internal personnel profiles.",
+      "expected": "broken_access_control",
+      "predicted": "broken_access_control"
+    },
+    {
+      "id": 5,
+      "description": "Changing a document reference allows a basic user to obtain a supervisor's restricted files.",
+      "expected": "broken_access_control",
+      "predicted": "broken_access_control"
+    },
+    {
+      "id": 6,
+      "description": "An unauthenticated caller receives another organization's invoices through a predictable endpoint.",
+      "expected": "broken_access_control",
+      "predicted": "broken_access_control"
+    },
+    {
+      "id": 7,
+      "description": "An apostrophe in a product filter unexpectedly changes the SQL WHERE clause.",
+      "expected": "sql_injection",
+      "predicted": "sql_injection"
+    },
+    {
+      "id": 8,
+      "description": "User-controlled input is inserted directly into a SELECT statement, modifying its conditions.",
+      "expected": "sql_injection",
+      "predicted": "sql_injection"
+    },
+    {
+      "id": 9,
+      "description": "An attacker supplies a UNION SELECT payload and extracts additional rows from a relational datastore.",
+      "expected": "sql_injection",
+      "predicted": "sql_injection"
+    },
+    {
+      "id": 10,
+      "description": "The application constructs database commands by joining raw request parameters into executable SQL.",
+      "expected": "sql_injection",
+      "predicted": "sql_injection"
+    },
+    {
+      "id": 11,
+      "description": "A search box accepts a tautology payload that makes the backend return every account.",
+      "expected": "sql_injection",
+      "predicted": "sql_injection"
+    },
+    {
+      "id": 12,
+      "description": "A crafted ORDER BY expression reveals that untrusted text is executed as part of a query.",
+      "expected": "sql_injection",
+      "predicted": "sql_injection"
+    },
+    {
+      "id": 13,
+      "description": "A storage bucket permits anonymous listing and retrieval of customer backups.",
+      "expected": "insecure_configuration",
+      "predicted": "insecure_configuration"
+    },
+    {
+      "id": 14,
+      "description": "An internet-facing management interface still accepts the vendor's original login credentials.",
+      "expected": "insecure_configuration",
+      "predicted": "insecure_configuration"
+    },
+    {
+      "id": 15,
+      "description": "Detailed stack traces and environment variables are displayed to visitors on production error pages.",
+      "expected": "insecure_configuration",
+      "predicted": "insecure_configuration"
+    },
+    {
+      "id": 16,
+      "description": "A deployment accidentally leaves a diagnostic endpoint accessible to everyone.",
+      "expected": "insecure_configuration",
+      "predicted": "insecure_configuration"
+    },
+    {
+      "id": 17,
+      "description": "The cloud database allows connections from any IP address without network restrictions.",
+      "expected": "insecure_configuration",
+      "predicted": "insecure_configuration"
+    },
+    {
+      "id": 18,
+      "description": "A publicly reachable service exposes its administrative console because access restrictions were disabled.",
+      "expected": "insecure_configuration",
+      "predicted": "insecure_configuration"
+    },
+    {
+      "id": 19,
+      "description": "A security engineer tests SQL injection defenses in an approved staging environment.",
+      "expected": "unknown",
+      "predicted": "unknown"
+    },
+    {
+      "id": 20,
+      "description": "An employee downloads a confidential report after receiving explicit authorization.",
+      "expected": "unknown",
+      "predicted": "unknown"
+    },
+    {
+      "id": 21,
+      "description": "A developer removes factory-default credentials before deploying the server.",
+      "expected": "unknown",
+      "predicted": "unknown"
+    },
+    {
+      "id": 22,
+      "description": "A database administrator executes a documented maintenance query.",
+      "expected": "unknown",
+      "predicted": "unknown"
+    },
+    {
+      "id": 23,
+      "description": "A monitoring system alerts when an unauthorized request is blocked by access-control rules.",
+      "expected": "unknown",
+      "predicted": "unknown"
+    },
+    {
+      "id": 24,
+      "description": "A cloud engineer disables public access to a storage bucket during a security review.",
+      "expected": "unknown",
+      "predicted": "unknown"
+    }
+  ]
+}
